@@ -1,0 +1,75 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --box-color: #f2f2f2;
+}
+
+.dark {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --box-color: #1f1f1f;
+}
+
+
+body {
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial;
+}
+
+
+.dashboard {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 60px 1fr 40px;
+
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background: var(--box-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: var(--box-color);
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.main {
+    grid-area: main;
+    padding: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background: var(--box-color);
+    text-align: center;
+    padding: 10px;
+}
+
+button {
+    padding: 6px 12px;
+    cursor: pointer;
+}
